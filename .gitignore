@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.ipynb_checkpoints/
+
+# Large / unnecessary files
+*.zip
+*.csv
+*.html
+*.dll
+
+dataset/Visualization graph/
+archive/

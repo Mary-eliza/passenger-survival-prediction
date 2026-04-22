@@ -1,0 +1,841 @@
+/* =========================
+GLOBAL STYLES
+========================= */
+
+/* FINAL BLUE COCKPIT BACKGROUND */
+
+/* PROFESSIONAL COCKPIT BACKGROUND */
+
+/* EXACT BACKGROUND FROM GENERATED UI */
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Rajdhani', sans-serif;
+
+    color: white;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #020617 0%,
+        #020617 35%,
+        #03122a 70%,
+        #020617 100%
+    );
+
+}
+
+    /* =========================
+    NAVBAR
+    ========================= */
+    
+    .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    position:relative;
+    z-index:10;
+    }
+    
+    .logo{
+    font-size:24px;
+    color:#00f3ff;
+    letter-spacing:2px;
+    }
+    
+    .nav-links{
+    display:flex;
+    gap:30px;
+    }
+    
+    .nav-links a{
+    color:#00f3ff;
+    text-decoration:none;
+    font-weight:600;
+    position:relative;
+    }
+    
+    .nav-links a:hover{
+    color:white;
+    }
+    
+    
+    /* =========================
+    FORM SECTION
+    ========================= */
+    
+    .form-section{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:40px;
+    }
+    
+    .form-card {
+
+        width: min(780px, 90vw);
+    
+        padding: 30px 34px;
+    
+        background: rgba(0, 18, 28, 0.92);
+    
+        border-radius: 16px;
+    
+        border: 1px solid rgba(0, 243, 255, 0.15);
+    
+        box-shadow:
+            0 20px 50px rgba(0,0,0,0.45);
+    
+    }
+    
+    .form-card h2{
+    text-align:center;
+    color:#00f3ff;
+    margin-bottom:60px auto;
+    }
+    
+    
+    /* INPUTS */
+    
+    .form-card label{
+    display:block;
+    margin-top:10px;
+    font-size:14px;
+    color:#b8dbe6;
+    }
+    
+    .form-card select,
+    .form-card input{
+    width:100%;
+    height:42px;
+    border-radius:10px;
+    border:none;
+    padding:0 14px;
+    margin-top:6px;
+    background:#e5e7eb;
+    font-size:14px;
+    box-sizing:border-box;
+    }
+    
+    .form-card select:focus,
+    .form-card input:focus{
+    outline:none;
+    box-shadow:0 0 8px rgba(0,243,255,0.5);
+    }
+    
+    
+    /* BUTTON */
+    
+    .form-card button{
+    width:100%;
+    height:50px;
+    margin-top:20px;
+    border-radius:12px;
+    border:none;
+    font-weight:bold;
+    background:linear-gradient(90deg,#00f3ff,#0077ff);
+    cursor:pointer;
+    transition:0.2s;
+    }
+    
+    .form-card button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,243,255,0.5);
+    }
+    
+    
+    /* =========================
+    MAP SECTION
+    ========================= */
+    
+    .map-section{
+    margin-top:60px;
+    padding:0 80px;
+    text-align:center;
+    }
+    
+    .map-section h2{
+    color:#00f3ff;
+    margin-bottom:20px;
+    }
+    
+    #map{
+    width:100%;
+    height:600px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+    }
+    
+    
+    /* =========================
+    RESULT PAGE
+    ========================= */
+    
+    .result-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:40px;
+    padding:40px;
+    }
+    
+    .result-card{
+    background:rgba(0,20,30,0.75);
+    border-radius:18px;
+    padding:30px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+    min-height:420px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    transition:0.3s;
+    }
+    
+    .result-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(0,243,255,0.2);
+    }
+    
+    .result-card h3{
+    margin-bottom:20px;
+    text-align:center;
+    color:#00f3ff;
+    }
+    
+    
+    /* SCORE CIRCLE */
+    
+    .score-circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:6px solid #00f3ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    font-weight:700;
+    box-shadow:0 0 25px rgba(0,243,255,0.5);
+    margin-bottom:20px;
+    }
+    
+    
+    /* RISK TEXT */
+    
+    .risk-indicator{
+    letter-spacing:2px;
+    font-weight:600;
+    color:#ff4d6d;
+    margin-bottom:10px;
+    }
+    
+    
+    /* MODEL SCORE */
+    
+    .model-score{
+    font-size:64px;
+    color:#00f3ff;
+    font-weight:700;
+    margin:15px 0;
+    }
+    
+    
+    /* PIE CHART */
+    
+    #pieChart{
+    width:380px !important;
+    height:380px !important;
+    margin:auto;
+    }
+    
+    
+    /* =========================
+    LOADING SCREEN
+    ========================= */
+    
+    #loadingOverlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#0b0f14,#121c2b);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:9999;
+    }
+    
+    #lottieContainer{
+    width:420px;
+    height:420px;
+    }
+    
+    .loading-text{
+    margin-top:25px;
+    color:#00f3ff;
+    font-size:26px;
+    letter-spacing:2px;
+    }
+    
+    
+    /* =========================
+    BACKGROUND ENGINE
+    ========================= */
+    
+    #bg-animation{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:-1;
+    pointer-events:none;
+    }
+    
+    #bg-animation canvas{
+    width:100%;
+    height:100%;
+    }
+
+.logo{
+    font-family:'Orbitron', sans-serif;
+    font-size:24px;
+    color:#00f3ff;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    font-family:'Rajdhani', sans-serif;
+}
+
+.nav-links a{
+    color:#00f3ff;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    position:relative;
+    padding-bottom:5px;
+}
+
+/* Hover underline */
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:#00f3ff;
+    transition:width 0.3s ease;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-links a.active::after{
+    width:100%;
+}
+/* =========================
+   HERO SECTION (WIX STYLE)
+========================= */
+
+.big-hero,
+.team-hero,
+.about-hero{
+text-align:center;
+padding:20px 20px 30px;
+margin-top:0;
+}
+
+.big-hero h1,
+.team-hero h1,
+.about-hero h1{
+font-family:'Orbitron',sans-serif;
+font-size:clamp(42px,5vw,60px);
+letter-spacing:2px;
+color:#00f3ff;
+margin-bottom:15px;
+text-shadow:0 0 10px rgba(0,243,255,0.3);
+}
+
+.big-hero p{
+font-family:'Rajdhani',sans-serif;
+font-size:18px;
+max-width:720px;
+margin:auto;
+color:#b8dbe6;
+}
+
+
+/* =========================
+   SCOPE PAGE
+========================= */
+
+.scope-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+padding:50px 10%;
+}
+
+.scope-card{
+background:rgba(0,25,35,0.75);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(0,243,255,0.15);
+box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.3s ease;
+}
+
+.scope-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,243,255,0.15);
+}
+
+.scope-card h3{
+color:#00f3ff;
+margin-bottom:12px;
+font-family:'Rajdhani',sans-serif;
+}
+
+.scope-card p{
+color:#d6faff;
+line-height:1.6;
+font-family:'Rajdhani',sans-serif;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge{
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+margin-bottom:12px;
+}
+
+.badge.planned{
+background:rgba(0,243,255,0.15);
+color:#00f3ff;
+}
+
+.badge.progress{
+background:rgba(140,0,255,0.2);
+color:#c18cff;
+}
+
+.badge.high{
+background:rgba(255,0,0,0.2);
+color:#ff6b6b;
+}
+
+.badge.medium{
+background:rgba(255,170,0,0.2);
+color:#ffb84d;
+}
+
+
+/* =========================
+   TEAM PAGE
+========================= */
+
+.team-vertical{
+display:flex;
+flex-direction:column;
+gap:50px;
+padding:60px 20%;
+}
+
+.team-member{
+background:rgba(0,25,35,0.75);
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(0,243,255,0.15);
+box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+transition:0.3s ease;
+}
+
+.team-member:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,243,255,0.15);
+}
+
+.team-member h2{
+color:#00f3ff;
+margin-bottom:8px;
+font-family:'Rajdhani',sans-serif;
+}
+
+.team-role{
+font-weight:600;
+color:white;
+margin-bottom:10px;
+}
+
+.team-member p{
+color:#d6faff;
+line-height:1.6;
+}
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+padding:60px 10%;
+}
+
+.about-card{
+background:rgba(0,25,35,0.75);
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(0,243,255,0.15);
+box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+transition:0.3s ease;
+}
+
+.about-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(25, 0, 255, 0.15);
+}
+
+.about-card h3{
+color:#00f3ff;
+margin-bottom:12px;
+}
+
+.about-card p{
+color:#d6faff;
+line-height:1.6;
+}
+
+
+/* =========================
+   ABOUT EXTRA SECTIONS
+========================= */
+
+.accuracy-box{
+text-align:center;
+padding:60px 20px;
+}
+
+.accuracy-box h2{
+font-size:72px;
+color:#00ffb7;
+margin-bottom:10px;
+}
+
+.accuracy-box p{
+font-size:18px;
+color:#b8dbe6;
+}
+
+.tech-section{
+padding:80px 10%;
+}
+
+.tech-section h2{
+text-align:center;
+font-size:48px;
+color:#00f3ff;
+margin-bottom:50px;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.tech-card{
+background:rgba(0,25,35,0.75);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(0,243,255,0.15);
+transition:0.3s ease;
+}
+
+.tech-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,243,255,0.15);
+}
+
+.tech-card h4{
+color:#00f3ff;
+margin-bottom:10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+background:linear-gradient(180deg,#050b1f,#020617);
+padding:60px 10% 30px;
+margin-top:80px;
+border-top:1px solid rgba(0,243,255,0.1);
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-column{
+flex:1;
+min-width:240px;
+}
+
+.footer-column h3{
+color:#00f3ff;
+margin-bottom:15px;
+}
+
+.footer-column p{
+color:#b8dbe6;
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-column a{
+display:block;
+color:#b8dbe6;
+text-decoration:none;
+margin-bottom:8px;
+}
+
+.footer-column a:hover{
+color:#00f3ff;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+font-size:13px;
+color:#7aaec0;
+border-top:1px solid rgba(0,243,255,0.08);
+padding-top:20px;
+}
+        #particles-js,
+#tech-canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+z-index:-1;
+pointer-events:none;
+}
+.navbar{
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    }
+    /* =========================
+HOME HERO
+========================= */
+
+.hero-home{
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:20px;
+    }
+    
+    .hero-home h1{
+    
+    font-family:'Orbitron',sans-serif;
+    
+    font-size:48px;
+    
+    letter-spacing:3px;
+    
+    color:#00f3ff;
+    
+    margin-bottom:10px;
+    
+    text-shadow:
+    0 0 10px rgba(0,243,255,0.3);
+    
+    }
+    
+    .hero-home p{
+    
+    font-family:'Rajdhani',sans-serif;
+    
+    font-size:18px;
+    
+    color:#b8dbe6;
+    
+    max-width:650px;
+    
+    margin:auto;
+
+    }
+
+    .card,
+.form-card,
+.result-card{
+
+border:1px solid rgba(0,243,255,0.1);
+
+box-shadow:
+0 0 20px rgba(0,243,255,0.05),
+0 0 40px rgba(0,243,255,0.03);
+
+}
+
+.form-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: -12px;
+
+    width: 50px;
+    height: 50px;
+
+    border-top: 2px solid #00f3ff;
+    border-left: 2px solid #00f3ff;
+
+    opacity: 0.7;
+
+}
+
+.form-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -12px;
+    right: -12px;
+
+    width: 50px;
+    height: 50px;
+
+    border-bottom: 2px solid #00f3ff;
+    border-right: 2px solid #00f3ff;
+
+    opacity: 0.7;
+
+}
+
+.form-card select:focus,
+.form-card input:focus {
+
+    outline: none;
+
+    border-color: #00f3ff;
+
+    box-shadow:
+        0 0 10px rgba(0,243,255,0.5);
+
+}
+/* =========================
+   PRIMARY ACTION BUTTON
+========================= */
+
+.form-card button {
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #00f3ff,
+            #0077ff
+        );
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+.form-card button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(0,243,255,0.45);
+
+}
+/* =========================
+   SYSTEM STATUS DOT
+========================= */
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: #00ffb7;
+
+    box-shadow:
+        0 0 6px #00ffb7,
+        0 0 12px rgba(0,255,183,0.6);
+
+}
+
+/* PARTICLES BACKGROUND LAYER */
+
+#particles-js {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+}

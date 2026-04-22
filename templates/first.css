@@ -1,0 +1,115 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-red: #ff0055;
+    --dark-bg: #0a0b10;
+    --panel-bg: rgba(20, 25, 35, 0.8);
+    --border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark-bg);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    background-image: radial-gradient(circle at 50% 50%, #1a1f2e 0%, #0a0b10 100%);
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 350px;
+    background: var(--panel-bg);
+    border-right: var(--border);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logo-area h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.highlight { color: var(--neon-blue); }
+
+.input-group { margin-bottom: 1rem; }
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--neon-blue);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+select, input {
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    color: white;
+    padding: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+.cyber-btn {
+    background: transparent;
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 15px;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.cyber-btn:hover {
+    background: var(--neon-blue);
+    color: black;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Dashboard Styling */
+.dashboard {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--panel-bg);
+    border: var(--border);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.map-card { flex: 2; height: 100%; display: flex; flex-direction: column; }
+#crashMap { flex: 1; width: 100%; border: 1px solid #333; }
+
+.analytics-row { flex: 1; display: flex; gap: 1.5rem; }
+.analytics-row .card { flex: 1; }
+
+.hidden { display: none; }
+.blink { animation: blinker 1.5s linear infinite; color: var(--neon-red); }
+
+@keyframes blinker { 50% { opacity: 0; } }
+
+#result-panel {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+#score-val { font-size: 4rem; margin: 10px 0; font-family: 'Orbitron'; }
